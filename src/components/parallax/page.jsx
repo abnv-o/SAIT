@@ -50,7 +50,7 @@ const teamMembers = [
   },
   {
     image: "adwaith.jpg",
-    name: "Adwaith Prathosh",
+    name: "Advaith Pradosh",
     position: "Secretary",
     year: "3rd Year",
   },
@@ -74,7 +74,7 @@ const teamMembers = [
   },
   {
     image: "trisha.jpg",
-    name: "JK V Trisha Gautum",
+    name: "K V Trisha Gautham",
     position: "Vice President",
     year: "3rd Year",
   },
