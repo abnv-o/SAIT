@@ -207,7 +207,7 @@ const HackathonAnnouncement = () => {
               {/* CTA Button */}
               <div>
                 <button
-                  onClick={() => navigate('/hackathon')}
+                  onClick={() => navigate('/')}
                   className="group relative inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold
                            text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg
                            transition-all duration-500 hover:shadow-lg hover:shadow-blue-500/25
