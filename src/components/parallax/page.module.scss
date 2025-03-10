@@ -1,0 +1,132 @@
+.main {
+    position: relative;
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    perspective: 1000px;
+}
+
+.gallery {
+    position: relative;
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    padding-bottom: 4rem;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+
+    @media (max-width: 1280px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 1.5rem;
+        padding-bottom: 3rem;
+    }
+
+    @media (max-width: 768px) {
+        gap: 1.25rem;
+        padding: 1rem;
+        padding-bottom: 2.5rem;
+    }
+
+    @media (max-width: 640px) {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        gap: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+.column {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: fit-content;
+    transform-style: preserve-3d;
+    will-change: transform;
+    
+    &:nth-child(1) { top: 0; }
+    &:nth-child(2) { top: 2rem; }
+    &:nth-child(3) { top: 1rem; }
+    &:nth-child(4) { top: 3rem; }
+
+    @media (max-width: 1280px) {
+        &:nth-child(1) { top: 0; }
+        &:nth-child(2) { top: 2rem; }
+        &:nth-child(3) { top: 0; }
+        &:nth-child(4) { top: 2rem; }
+    }
+
+    @media (max-width: 768px) {
+        gap: 1.5rem;
+        &:nth-child(n) { top: 0; }
+    }
+}
+
+.memberCard {
+    position: relative;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 1rem;
+    overflow: hidden;
+    backdrop-filter: blur(7px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    aspect-ratio: 3/4;
+    transform-origin: center;
+    height: auto;
+    min-height: 250px;
+    max-height: 350px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    cursor: pointer;
+    will-change: transform;
+
+    &:hover {
+        border-color: rgba(59, 130, 246, 0.5);
+        box-shadow: 
+            0 0 30px rgba(59, 130, 246, 0.2),
+            0 20px 40px rgba(0, 0, 0, 0.4);
+        z-index: 2;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        will-change: transform;
+        transition: transform 0.3s ease;
+    }
+
+    @media (max-width: 1280px) {
+        min-height: 200px;
+        max-height: 300px;
+    }
+
+    @media (max-width: 768px) {
+        min-height: 180px;
+        max-height: 280px;
+    }
+
+    @media (max-width: 640px) {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 280px;
+        min-height: 350px;
+    }
+}
+
+.spacer{
+    height: 100vh;
+}
